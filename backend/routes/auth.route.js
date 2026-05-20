@@ -1,6 +1,14 @@
-app.get("/api/formations", (req, res) => {
-  db.query("SELECT * FROM formations", (err, results) => {
-    if (err) return res.status(500).json({ error: err.message });
-    res.json(results);
-  });
-});
+const express = require("express");
+const authController = require("../controllers/auth.controller");
+const { authenticate } = require("../middleware/auth.middleware");
+
+const router = express.Router();
+
+router.post("/signup", authController.signup);
+router.post("/signup-admin", authController.signupAdmin);
+router.post("/signup-student", authController.signupStudent);
+router.post("/login", authController.login);
+router.post("/logout", authController.logout);
+router.get("/me", authenticate, authController.me);
+
+module.exports = router;
