@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-primary: #CE7B91;
+  --color-secondary: #C0E8F9;
+  --color-success: #036016;
+
+  --color-text: #2f3437;
+  --color-muted: #6b7280;
+  --color-white: #ffffff;
+
+  --font-main: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background: var(--color-secondary);
+}
+.auth-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--color-secondary), #f8eef2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.auth-page input {
+  width: 100%;
+  display: block;
+  padding: 13px 14px;
+  margin-bottom: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-family: var(--font-main);
+  font-size: 14px;
+  color: var(--color-text);
+  outline: none;
+}
+
+.auth-page input::placeholder {
+  color: var(--color-muted);
+}
+
+.auth-page input:focus {
+  border-color: var(--color-primary);
+}
