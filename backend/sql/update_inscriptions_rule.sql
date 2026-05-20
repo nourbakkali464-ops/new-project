@@ -6,4 +6,3 @@ ALTER TABLE inscriptions DROP INDEX utilisateur_id;
 
 -- Apres cette modification :
 -- un etudiant peut avoir plusieurs anciennes inscriptions,
--- mais une seule inscription active est controlee dans le code backend.
